@@ -130,7 +130,7 @@ Use the following syntax to run the script:
 - `ccittfax4`: CCITT Group 4 fax compression (for black-and-white images)
 
 # Python Script: Convert MRXS to SVS using OpenSlide ( Not Efficient )
-
+I don't recommend using this version unless you have to.
 1. **Install OpenSlde**
 ```bash
 pip install openslide-python
@@ -139,7 +139,7 @@ pip install openslide-python
 
 3. **Run the Script**:
    ```bash
-   python mrxs_to_svs_openslide.py [level]
+   python mrxs_to_svs_openslide.py "path/to/input.mrxs" "path/to/output.svs" [level]
    ```
 ## level Options:
 - `0`: Highest Resolution - ( Requires High RAM )
