@@ -6,8 +6,33 @@ The first phase of the project focuses on converting MRXS files to the more comm
 
 Additional features will be introduced in future phases, including support for converting multiple image formats, further enhancing the flexibility and ease of use of the tool.
 
+## Requirements
 
-# Steps to Convert MRXS to SVS using Vips and a Bash Script
+- **Ubuntu**:
+  
+libvips
+```bash
+sudo apt install libvips
+sudo apt install libvips-tools
+sudo apt install libvips-dev
+```
+pyvips
+```bash
+pip install pyvips
+```
+
+- **Windows**:
+- 
+pyvips
+```bash
+pip install pyvips
+```
+
+Follow the instruction [here](https://www.libvips.org/install.html)
+
+
+
+# Bash Script: Convert MRXS to SVS using Vips
 
 
 ## 2. Make the Script Executable
@@ -61,3 +86,47 @@ Use the following syntax to run the script:
     ```bash
     ./mrxs_to_svs.sh input.mrxs output.svs ccittfax4
     ```
+
+
+
+# Steps to Convert MRXS to SVS using Vips and a Python Script
+
+# Python Script: Convert MRXS to SVS using PyVips
+
+
+## How to Run:
+
+1. **Install PyVips** (if not installed):
+   ```bash
+   pip install pyvips
+   ```
+
+2. **Run the Script**:
+   ```bash
+   python convert_mrxs_to_svs.py input.mrxs output.svs [compression] [tile_width] [tile_height]
+   ```
+
+## Examples:
+
+1. **Without Compression** (default tile size 256x256):
+   ```bash
+   python convert_mrxs_to_svs.py input.mrxs output.svs none
+   ```
+
+2. **With JPEG Compression and Custom Tile Size**:
+   ```bash
+   python convert_mrxs_to_svs.py input.mrxs output.svs jpeg 512 512
+   ```
+
+3. **With LZW Compression and Default Tile Size**:
+   ```bash
+   python convert_mrxs_to_svs.py input.mrxs output.svs lzw
+   ```
+
+## Compression Options:
+- `none`: No compression (default)
+- `jpeg`: JPEG compression
+- `lzw`: LZW compression
+- `deflate`: DEFLATE compression
+- `packbits`: PackBits compression
+- `ccittfax4`: CCITT Group 4 fax compression (for black-and-white images)
