@@ -145,5 +145,5 @@ pip install openslide-python
 ## level Options:
 - `0`: Highest Resolution - ( Requires High RAM )
 - `1`: 2nd Highest Resolution - ( Requires High RAM )
-- `n`: All the way to the lowes resolution 
+- `n`: All the way to the lowest resolution 
 
