@@ -22,7 +22,7 @@ pip install pyvips
 ```
 
 - **Windows**:
-- 
+  
 pyvips
 ```bash
 pip install pyvips
@@ -89,7 +89,7 @@ Use the following syntax to run the script:
 
 
 
-# Python Script: Convert MRXS to SVS using PyVips
+# Python Script: Convert MRXS to SVS using PyVips ( Recommended )
 
 
 ## How to Run:
@@ -108,17 +108,17 @@ Use the following syntax to run the script:
 
 1. **Without Compression** (default tile size 256x256):
    ```bash
-   python convert_mrxs_to_svs.py input.mrxs output.svs none
+   python mrxs_to_svs_pyvips.py input.mrxs output.svs none
    ```
 
 2. **With JPEG Compression and Custom Tile Size**:
    ```bash
-   python convert_mrxs_to_svs.py input.mrxs output.svs jpeg 512 512
+   python mrxs_to_svs_pyvips.py input.mrxs output.svs jpeg 512 512
    ```
 
 3. **With LZW Compression and Default Tile Size**:
    ```bash
-   python convert_mrxs_to_svs.py input.mrxs output.svs lzw
+   python mrxs_to_svs_pyvips.py input.mrxs output.svs lzw
    ```
 
 ## Compression Options:
@@ -128,3 +128,21 @@ Use the following syntax to run the script:
 - `deflate`: DEFLATE compression
 - `packbits`: PackBits compression
 - `ccittfax4`: CCITT Group 4 fax compression (for black-and-white images)
+
+# Python Script: Convert MRXS to SVS using OpenSlide ( Not Efficient )
+
+1. **Install OpenSlde**
+```bash
+pip install openslide-python
+```
+2. **You need a sepereate OpenSlide package, Install it using the instruction [here](https://openslide.org/api/python/#installing)**
+
+3. **Run the Script**:
+   ```bash
+   python mrxs_to_svs_openslide.py [level]
+   ```
+## level Options:
+- `0`: Highest Resolution - ( Requires High RAM )
+- `1`: 2nd Highest Resolution - ( Requires High RAM )
+- `n`: All the way to the lowes resolution 
+
