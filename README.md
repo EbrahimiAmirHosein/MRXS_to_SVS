@@ -35,7 +35,7 @@ Follow the instruction [here](https://www.libvips.org/install.html)
 # Bash Script: Convert MRXS to SVS using Vips
 
 
-## 2. Make the Script Executable
+## 1. Make the Script Executable
 
 Run the following command to make the script executable:
 
@@ -43,7 +43,7 @@ Run the following command to make the script executable:
 chmod +x mrxs_to_svs.sh
 ```
 
-## 3. Run the Script
+## 2. Run the Script
 
 Use the following syntax to run the script:
 
