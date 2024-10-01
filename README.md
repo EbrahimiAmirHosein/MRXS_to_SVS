@@ -1,5 +1,11 @@
 # MRXS_to_SVS
 
+Microscopic images are often collected from various labs across different locations, leading to variations in the file formats used for storage. This project aims to simplify the process of working with these diverse formats by leveraging existing libraries, such as Vips, to create user-friendly scripts. These scripts are designed to assist individuals with limited programming experience in managing image conversions.
+
+The first phase of the project focuses on converting MRXS files to the more commonly used SVS format. MRXS files often contain multiple directories and data files, making them difficult to open and manage. By streamlining this conversion, we aim to reduce the complexity and improve accessibility for researchers and lab technicians.
+
+Additional features will be introduced in future phases, including support for converting multiple image formats, further enhancing the flexibility and ease of use of the tool.
+
 
 # Steps to Convert MRXS to SVS using Vips and a Bash Script
 
