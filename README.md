@@ -101,7 +101,7 @@ Use the following syntax to run the script:
 
 2. **Run the Script**:
    ```bash
-   python convert_mrxs_to_svs.py input.mrxs output.svs [compression] [tile_width] [tile_height]
+   python mrxs_to_svs_pyvips.py input.mrxs output.svs [compression] [tile_width] [tile_height]
    ```
 
 ## Examples:
