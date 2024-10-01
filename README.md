@@ -89,8 +89,6 @@ Use the following syntax to run the script:
 
 
 
-# Steps to Convert MRXS to SVS using Vips and a Python Script
-
 # Python Script: Convert MRXS to SVS using PyVips
 
 
