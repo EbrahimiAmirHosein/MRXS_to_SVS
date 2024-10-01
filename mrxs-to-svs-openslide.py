@@ -1,3 +1,4 @@
+import argparse
 import openslide
 from PIL import Image
 
@@ -31,8 +32,15 @@ def convert_mrxs_to_tiff(input_path, output_path, level):
     except Exception as e:
         print(f"Error: {e}")
 
-# Usage
-input_mrxs = "ALI surgical w catheter m #8.mrxs"
-output_tiff = "Res-lvl-5.svs"
-convert_mrxs_to_tiff(input_mrxs, output_tiff, level=5)
+if __name__ == "__main__":
+    # Set up argument parsing
+    parser = argparse.ArgumentParser(description="Convert MRXS file to TIFF at a specified level.")
+    parser.add_argument("input", help="Input MRXS file path")
+    parser.add_argument("output", help="Output TIFF file path")
+    parser.add_argument("level", type=int, help="Level to extract from the MRXS file")
 
+    # Parse arguments
+    args = parser.parse_args()
+
+    # Call the conversion function with parsed arguments
+    convert_mrxs_to_tiff(args.input, args.output, args.level)
