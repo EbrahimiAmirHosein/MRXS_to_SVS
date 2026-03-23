@@ -6,7 +6,7 @@ def convert_mrxs_to_svs(input_file, output_file, compression="none", tile_width=
     image = pyvips.Image.new_from_file(input_file, access="sequential")
 
     compression_options = {
-        "none": None,
+        "none": "none",
         "jpeg": "jpeg",
         "lzw": "lzw",
         "deflate": "deflate",
